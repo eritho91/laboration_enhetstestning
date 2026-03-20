@@ -23,8 +23,6 @@ public class ATMServiceTest {
 
     @Test
     void testInvalidAmountException(){
-        when(mockAccount.getBalance()).thenReturn(100.0);
-
         assertThrows(
                 InvalidAmountException.class,
                 () -> atmService.withdrawFunds(0.0)
